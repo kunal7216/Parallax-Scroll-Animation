@@ -158,7 +158,7 @@
 
 
 
-    /* Transition (from Scene2 to Scene3) */
+       /* Transition (from Scene2 to Scene3) */
 
 
 
@@ -178,7 +178,7 @@
 
 
 
-    /* Scene 3 */
+         /* Scene 3 */
 
 
     let scene3 = gsap.timeline();
@@ -209,7 +209,7 @@
     scene3.to("#bg2-grad", { attr: { r: 500 } }, 0)
 
 
-    /*   falling star   */
+        /*   falling star   */
 
 
     gsap.to("#fstar", {
