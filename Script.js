@@ -25,11 +25,13 @@
     scene1.to("#h1-9", { y: 3.5 * speed, x: -0.2 * speed }, 0)
 
     //animate text
+
     scene1.to("#info", { y: 8 * speed }, 0)
 
 
 
     /*   Bird   */
+
     gsap.fromTo("#bird", { opacity: 1 }, {
         y: -250,
         x: 800,
@@ -46,6 +48,7 @@
 
 
     /* Clouds  */
+
     let clouds = gsap.timeline();
     ScrollTrigger.create({
         animation: clouds,
@@ -63,6 +66,8 @@
 
 
     /* Sun motion Animation  */
+
+
     let sun = gsap.timeline();
     ScrollTrigger.create({
         animation: sun,
@@ -73,9 +78,11 @@
     });
 
     //sun motion 
+
     sun.to("#bg_grad", { attr: { cy: "330" } }, 0.00)
 
     //bg change
+
     sun.to("#sun", { attr: { offset: "0.15" } }, 0.00)
     sun.to("#bg_grad stop:nth-child(2)", { attr: { offset: "0.15" } }, 0.00)
     sun.to("#bg_grad stop:nth-child(3)", { attr: { offset: "0.18" } }, 0.00)
@@ -86,6 +93,7 @@
 
 
     /*   SCENE 2  */
+
     let scene2 = gsap.timeline();
     ScrollTrigger.create({
         animation: scene2,
@@ -105,6 +113,7 @@
 
 
     /* Bats */
+
     gsap.fromTo("#bats", { opacity: 1, y: 400, scale: 0 }, {
         y: 120,
         scale: 0.8,
@@ -127,6 +136,7 @@
 
 
     /* Sun increase */
+
     let sun2 = gsap.timeline();
     ScrollTrigger.create({
         animation: sun2,
@@ -146,6 +156,8 @@
 
 
     /* Transition (from Scene2 to Scene3) */
+
+
     gsap.set("#scene3", { y: 580, visibility: "visible" })
     let sceneTransition = gsap.timeline();
     ScrollTrigger.create({
@@ -163,6 +175,8 @@
 
 
     /* Scene 3 */
+
+
     let scene3 = gsap.timeline();
     ScrollTrigger.create({
         animation: scene3,
@@ -173,6 +187,8 @@
     });
 
     //Hills motion
+
+
     scene3.fromTo("#h3-1", { y: 300 }, { y: -550 }, 0)
     scene3.fromTo("#h3-2", { y: 800 }, { y: -550 }, 0.03)
     scene3.fromTo("#h3-3", { y: 600 }, { y: -550 }, 0.06)
@@ -180,9 +196,11 @@
     scene3.fromTo("#h3-5", { y: 1000 }, { y: -550 }, 0.12)
 
     //stars
+
     scene3.fromTo("#stars", { opacity: 0 }, { opacity: 0.5, y: -500 }, 0)
 
     // Scroll Back text
+
     scene3.fromTo("#arrow2", { opacity: 0 }, { opacity: 0.7, y: -710 }, 0.25)
     scene3.fromTo("#text2", { opacity: 0 }, { opacity: 0.7, y: -710 }, 0.3)
 
@@ -192,6 +210,8 @@
 
 
     /*   falling star   */
+
+
     gsap.to("#fstar", {
         x: -700,
         y: -250,
@@ -208,6 +228,8 @@
 
 
     //reset scrollbar position after refresh
+
+
     window.onbeforeunload = function() {
         window.scrollTo(0, 0);
     }
